@@ -1,0 +1,4 @@
+This library adds a vocabulary which emulates a 16-bit Forth.
+
+Core words are redefined to generate 16-bit results.  Some tricks are
+needed to restrict addresses, in particular xts, to 16 bits as well.
