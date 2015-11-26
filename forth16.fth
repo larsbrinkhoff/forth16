@@ -32,6 +32,7 @@ h: variable   create 2 allot h;
 h: does>   postpone does> postpone @ h; compile-only
 
 h: '   ' >body @ h;
+h: [']   ' postpone literal h; compile-only
 h: >body h;
 
 h: c@   >host c@ h;

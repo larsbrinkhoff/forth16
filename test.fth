@@ -1,4 +1,4 @@
-include ../forth16/forth16.fth
+include forth16.fth
 
 : fail   ." FAIL: " source type cr abort ;
 : assert=   <> if fail then ;
@@ -16,8 +16,11 @@ create y  2 allot
 65535 ' y >body !
 y @ 65535 assert=
 
-: foo   refill ;
-' foo execute fail
+: foo   1+ ;
+42 ' foo execute 43 assert=
+
+: foo2   ['] foo execute ;
+42 foo2 43 assert=
 
 : bar   create 42 , does> @ ;
 bar baz
