@@ -29,7 +29,7 @@ h: ;   postpone ; swap >host ! ; immediate
 
 h: create   create here ,  does> @ h;
 h: variable   create 2 allot h;
-h: does>   postpone does> postpone @ h; immediate
+h: does>   postpone does> postpone @ h; compile-only
 
 h: '   ' >body @ h;
 h: >body h;

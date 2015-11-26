@@ -19,5 +19,9 @@ y @ 65535 assert=
 : foo   refill ;
 ' foo execute fail
 
+: bar   create 42 , does> @ ;
+bar baz
+baz 42 assert=
+
 .( SUCCESS ) cr
 bye
