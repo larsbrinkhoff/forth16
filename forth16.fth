@@ -38,7 +38,7 @@ h: c@   >host c@ h;
 h: c!   >host c! h;
 
 \ Little endian versions.
-h: @   dup c@  swap 1+ c@ 8 rshift + h;
+h: @   dup c@  swap 1+ c@ 8 lshift + h;
 h: !   2dup c!  swap 8 rshift swap  1+ c! h;
 
 h: c,   here c!  1 allot h;
